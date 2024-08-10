@@ -19,6 +19,7 @@ pipeline {
             steps {
                 sh '''
                 # Copy the index.html to Nginx web directory
+                sudo chmod 777 /var/www/html
                 sudo cp index.html /var/www/html/index.html
 
                 # Restart Nginx to apply changes
