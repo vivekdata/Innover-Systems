@@ -1,8 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repository') {
-            stage('git') {
+        stage('Clone Repository from github') {
             steps {
                 git branch: 'main', url: 'https://github.com/vivekdata/Innover-Systems.git'
             }
