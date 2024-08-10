@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/vivekdata/Innover-Systems.git'
+                git branch: 'main',
+                    credentialsId: '8e74e6d5-9d39-4c87-b9b3-df0692214806',
+                    url: 'https://github.com/vivekdata/Innover-Systems.git'
             }
         }
         stage('Install Nginx') {
